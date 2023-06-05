@@ -6,7 +6,7 @@ export const TimeDisplay = () => {
   const { play, setPlay, isBreak, setIsBreak, clockCount, setReset } =
     useContext(Contexto);
   const audioElem = useRef(null);
-  const [currCount, setCurrCount] = useState(0);
+  const [currCount, setCurrCount] = useState(1500);
 
   useEffect(() => {
     let timeOutId;
@@ -48,6 +48,7 @@ export const TimeDisplay = () => {
   //Time converter
   const minutes = Math.floor(currCount / 60);
   const seconds = currCount % 60;
+
   console.log("Re-rendering");
 
   return (
