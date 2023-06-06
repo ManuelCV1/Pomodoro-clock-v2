@@ -54,12 +54,11 @@ export const TimeDisplay = () => {
   return (
     <div className="TimeDisplay_container">
       <div>
-        <h1>{isBreak ? "Break" : "Session"} Time</h1>
+        <h1>{isBreak ? "Break" : "Session"} Time⏱️</h1>
         <h2>{`${minutes < 10 ? "0" : ""}${minutes}:${
           seconds < 10 ? "0" : ""
         }${seconds}`}</h2>
         <button onClick={() => setPlay((play) => !play)}>Start/Stop</button>
-        <br />
         <button onClick={handleReset}>Reset</button>
         <audio ref={audioElem} id="beep" src={alarm}></audio>
       </div>
